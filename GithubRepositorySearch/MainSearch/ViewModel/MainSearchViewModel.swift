@@ -30,7 +30,7 @@ class MainSearchViewModel {
         
         return URLSession.shared.rx.json(url: url)
 //            .retry(3)
-            //        .catchErrorJustReturn([])
+            .catchErrorJustReturn([])
             .map(parse)
     }
     
